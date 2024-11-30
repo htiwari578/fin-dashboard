@@ -12,7 +12,7 @@ const Sidebar = () => {
         <nav className="flex-1 p-6">
             <ul>
                 <li className="mb-6">
-                    <Link  to='profile'className="flex items-center space-x-4 hover:bg-gray-700 p-2 rounded">
+                    <Link  to='/profile'className="flex items-center space-x-4 hover:bg-gray-700 p-2 rounded">
                     <FaUser /> <span>Profile</span>
  
                     </Link>
