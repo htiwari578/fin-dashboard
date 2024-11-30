@@ -2,12 +2,12 @@ import React from 'react';
 import { Bar, Pie, Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement, PointElement, LineElement } from 'chart.js';
 
-// Register Chart.js components
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
   BarElement,
-  ArcElement, // Required for Pie Chart
+  ArcElement, 
   PointElement,
   LineElement,
   Title,
@@ -16,7 +16,7 @@ ChartJS.register(
 );
 
 const FinanceTracker = () => {
-  // Data for the bar chart (Income vs Expenses vs Savings)
+
   const barData = {
     labels: ['Income', 'Expenses', 'Savings'],
     datasets: [
@@ -28,7 +28,7 @@ const FinanceTracker = () => {
     ],
   };
 
-  // Data for the Pie Chart (Expense breakdown)
+
   const pieData = {
     labels: ['Food', 'Rent', 'Entertainment', 'Transport', 'Others'],
     datasets: [
@@ -40,7 +40,7 @@ const FinanceTracker = () => {
     ],
   };
 
-  // Data for the Line Chart (Income over months)
+ 
   const lineData = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June'],
     datasets: [
@@ -53,7 +53,7 @@ const FinanceTracker = () => {
     ],
   };
 
-  // Options for the chart
+
   const barOptions = {
     responsive: true,
     plugins: {
@@ -97,7 +97,7 @@ const FinanceTracker = () => {
     <div className="bg-white p-6 rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold mb-4">Finance Tracker</h2>
       
-      {/* Summary Section */}
+     
       <div className="grid grid-cols-3 gap-4 mb-6">
         <div className="bg-green-100 p-4 rounded-lg text-center">
           <h3 className="text-lg font-semibold">Income</h3>
@@ -113,12 +113,12 @@ const FinanceTracker = () => {
         </div>
       </div>
       
-      {/* Bar Chart */}
+     
       <div className="mb-8">
         <Bar data={barData} options={barOptions} />
       </div>
 
-      {/* Pie Chart for Expense Breakdown */}
+   
       <div className="mb-8 flex justify-center">
         <div style={{ width: '300px', height: '300px' }}>
 
@@ -126,7 +126,7 @@ const FinanceTracker = () => {
         </div>
       </div>
 
-      {/* Line Chart for Income Over Time */}
+    
       <div className="mb-8 flex justify-center">
         <div style={{ width: '300px', height: '300px' }}>
 
